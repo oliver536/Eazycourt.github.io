@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with FoodHut landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Eazy Court</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <link rel="stylesheet" href="assets/vendors/animate/animate.css">
+
+    <!-- Bootstrap + FoodHut main styles -->
+    <link rel="stylesheet" href="assets/css/foodhut.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Navbar -->
+    <nav class="custom-navbar navbar navbar-expand-lg navbar-dark fixed-top" data-spy="affix" data-offset-top="10">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <!-- Los enlaces del menú -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Acerca de nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallary">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reservas.html">Reservas</a>
+                </li>
+            </ul>
+            <a class="navbar-brand m-auto" href="#">
+                <img src="assets/imgs/logo.jpg" class="brand-img" alt="">
+                <span class="brand-txt">Eazy Court</span>
+            </a>
+
+            <ul class="navbar-nav ml-auto"> <!-- Utilizamos ml-auto para alinear los botones a la derecha -->
+                <!-- Los enlaces del menú -->
+                <div class="wrapRightNav">
+                    <div class="wrapUserButtons">
+                        <li class="nav-item" id="registro-button">
+                            <a class="btn btn-primary btn-custom" href="registro.html">
+                                <span class="ti-pencil-alt iconNav"></span> Registrate
+                            </a>
+                        </li>
+                        <li class="nav-item" id="login-button">
+                            <a href="login.html" class="btn btn-primary btn-custom">
+                                <span class="ti-key iconNav"></span> Log in
+                            </a>
+                        </li>
+                        <li class="nav-item" id="isLogged">
+                            <a class="btn btn-primary btn-custom">
+                                <span class="ti-user iconNav"></span>
+                                <span id="userName">Conectado</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" id="logout-button">
+                            <a class="btn btn-primary btn-custom" onclick="logout()">
+                                <span class="ti-shift-right iconNav"></span> Logout
+                            </a>
+                        </li>
+                    </div>
+                    
+                    <div class="wrapOptionsButtons">
+
+                         <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">Servicios<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testmonial">Opiniones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contactanos</a>
+                        </li>
+                        <li class="nav-item"> </li>
+                    </ul>
+
+                      </div>
+                      
+                </div>
+
+
+              
+
+                 
+
+        </div>
+    </nav>
+
+    <!-- header -->
+    <header id="home" class="header">
+        <div class="overlay text-white text-center">
+            <div class="video-container">
+                <video autoplay loop>
+                    <source src="assets/imgs/video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <h1 class="display-2 font-weight-bold my-3">Eazy Court</h1>
+
+        </div>
+    </header>
+
+    <!--  About Section  -->
+    <div id="about" class="container-fluid wow fadeIn" id="about" data-wow-duration="1.5s">
+        <div class="row">
+            <div class="col-lg-6 has-img-bg"></div>
+            <div class="col-lg-6">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 py-6 my-5">
+                        <h2 class="mb-4">Acerca de nosotros</h2>
+                        <p> Somos Oliver Del Jesus y Yuliana Pichardo, un equipo apasionado del fútbol comprometido en
+                            brindar una experiencia excepcional a los jugadores de Santo Domingo. Creemos en el poder
+                            del fútbol para unir a las personas, fomentar la competencia amistosa y promover un estilo
+                            de vida saludable. Queremos contribuir a esta pasión y crear una comunidad vibrante en torno
+                            al fútbol en nuestra ciudad.
+                            Nuestra plataforma web ofrece una solución tecnológica eficiente y fácil de usar,
+                            simplificando el proceso de búsqueda, reserva y pago de las canchas de fútbol. Queremos
+                            ahorrarles tiempo y esfuerzo a los futbolistas en la organización de sus partidos. También
+                            les proporcionamos herramientas de administración y seguimiento de reservas para optimizar
+                            su ocupación y aumentar su eficiencia operativa.Estamos comprometidos en ofrecer un servicio
+                            de calidad, centrado en el usuario y en la satisfacción de nuestros clientes. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  gallary Section  -->
+    <div id="gallary" class="text-center bg-dark text-light has-height-md middle-items wow fadeIn">
+        <h2 class="section-title">Canchas disponibles</h2>
+    </div>
+                                                          <div class="wrapImages">
+
+
+    </div>
+
+    <div class="wrapCanchas mb-5">
+
+        <div class="canchaDiv mb-5 ">
+            <h4 class="imageTitle ">Brazuca</h4>
+            
+            <div class="canchaImageBox">
+                <img src="assets/imgs/Brazuca.png" alt="Cancha 1" class="canchaImage">
+                <a href="#" class="canchaAnchor" data-cancha="1" >
+                    <i class="canchaIcon ti-plus"></i>
+                </a>
+            </div>
+            <!-- Agrega el resto de las canchas con sus respectivos datos -->
+            <!-- ... -->
+        </div>
+
+        <div class="canchaDiv mb-5 ">
+            <h4 class="imageTitle ">Barca academy</h4>
+            
+            <div class="canchaImageBox">
+                <img src="assets/imgs/Barca academy.jpg" alt="Cancha 1" class="canchaImage">
+                <a href="#" class="canchaAnchor" data-cancha="1">
+                    <i class="canchaIcon ti-plus"></i>
+                </a>
+            </div>
+            <!-- Agrega el resto de las canchas con sus respectivos datos -->
+            <!-- ... -->
+        </div>  <div class="canchaDiv mb-5 ">
+            <h4 class="imageTitle ">Soccer town</h4>
+            
+            <div class="canchaImageBox">
+                <img src="assets/imgs/soccer town.jpg" alt="Cancha 1" class="canchaImage">
+                <a href="#" class="canchaAnchor" data-cancha="1">
+                    <i class="canchaIcon ti-plus"></i>
+                </a>
+            </div>
+            <!-- Agrega el resto de las canchas con sus respectivos datos -->
+            <!-- ... -->
+        </div>  <div class="canchaDiv mb-5 ">
+            <h4 class="imageTitle ">Cancha UASD</h4>
+            
+            <div class="canchaImageBox">
+                <img src="assets/imgs/Cancha UASD.jpg" alt="Cancha 1" class="canchaImage">
+                <a href="#" class="canchaAnchor" data-cancha="1">
+                    <i class="canchaIcon ti-plus"></i>
+                </a>
+            </div>
+            <!-- Agrega el resto de las canchas con sus respectivos datos -->
+            <!-- ... -->
+        </div>  <div class="canchaDiv mb-5 ">
+            <h4 class="imageTitle ">Felix Sanchez</h4>
+            
+            <div class="canchaImageBox">
+                <img src="assets/imgs/Felix sanchez.jpg" alt="Cancha 1" class="canchaImage">
+                <a href="#" class="canchaAnchor" data-cancha="1">
+                    <i class="canchaIcon ti-plus"></i>
+                </a>
+            </div>
+            <!-- Agrega el resto de las canchas con sus respectivos datos -->
+            <!-- ... -->
+        </div> 
+         
+       
+    </div>
+    
+
+                    <!-- Modal de reserva -->
+                    <<!-- Modal de reserva -->
+<div id="reservationModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Reservar Cancha</h2>
+        <p>Ingresa tu email y selecciona una fecha y hora para la reserva:</p>
+        <form id="reservationForm">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" required>
+            <label for="date">Fecha:</label>
+            <input type="date" name="date" id="date" required>
+            <label for="time">Hora:</label>
+            <input type="time" name="time" id="time" required>
+            <button type="button" onclick="guardarReservacion()">Reservar</button>
+        </form>
+    </div>
+</div>
+
+
+                <!-- book a table Section  -->  
+                <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items"
+                    id="book-table">
+                    <div class="numeral">
+                        <h2 class="section-title mb-5">disponibilidad de Canchas</h2>
+
+                        <li class="numeral">
+                            <a class="numeral" href="reservas.html">Reservas</a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <script src="script.js"></script>
+</body>
+
+</html>
+
+
+<!-- BLOG Section  -->
+<div id="blog" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn">
+    <h2 class="section-title py-5">Servicios</h2>
+    <div class="row justify-content-center">
+        <div class="col-sm-7 col-md-4 mb-5">
+            <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#foods" role="tab"
+                        aria-controls="pills-home" aria-selected="true">servicios online</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#juices" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">Servicios</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="foods" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-transparent border my-3 my-md-0">
+                        <img src="assets/imgs/soccer town.jpg" alt="template by DevCRID http://www.devcrud.com/"
+                            class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">Reservaciones en
+                                    línea</a></h1>
+                            <h4 class="pt20 pb20"> </h4>
+                            <p class="text-white">Los usuarios pueden reservar una cancha de fútbol en línea, eligiendo
+                                el día y la hora que deseen, con un proceso de pago seguro. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-transparent border my-3 my-md-0">
+                        <img src="assets/imgs/select.jpg" alt="template by DevCRID http://www.devcrud.com/"
+                            class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">Selección de cancha</a>
+                            </h1>
+                            <h4 class="pt20 pb20"></h4>
+                            <p class="text-white">Los usuarios pueden ver imágenes de las canchas disponibles y
+                                seleccionar la que prefieran, teniendo en cuenta la capacidad, ubicación, tipo de
+                                superficie, iluminación, entre otros. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-transparent border my-3 my-md-0">
+                        <img src="assets/imgs/reservaciones.png" alt="template by DevCRID http://www.devcrud.com/"
+                            class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">Calendario de
+                                    reservaciones</a></h1>
+                            <h4 class="pt20 pb20"></h4>
+                            <p class="text-white">Los usuarios pueden ver en línea un calendario de disponibilidad para
+                                cada cancha, con la posibilidad de hacer reservas futuras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="juices" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="row">
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card bg-transparent border">
+                        <img src="assets/imgs/comida.jpg" alt="Venta de comida en las canchas" class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">Venta de Comida</a></h1>
+                            <h4 class="pt20 pb20">Saborea deliciosos platillos</h4>
+                            <p class="text-white">Disfruta de nuestra variedad de comida y bebidas mientras juegas en nuestras canchas. ¡Satisfacemos todos los gustos!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card bg-transparent border">
+                        <img src="assets/imgs/medico.jpg" alt="Área Médica" class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">Área Médica</a></h1>
+                            <h4 class="pt20 pb20">Cuidamos de tu bienestar</h4>
+                            <p class="text-white">Contamos con un equipo médico profesional en caso de cualquier lesión o emergencia durante el juego.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card bg-transparent border">
+                        <img src="assets/imgs/tiro.jpg" alt="Área de Entrenamiento de Tiro" class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">Entrenamiento de Tiro</a></h1>
+                            <h4 class="pt20 pb20">Mejora tu precisión</h4>
+                            <p class="text-white">Nuestro área de entrenamiento de tiro te ayudará a perfeccionar tus habilidades y a ser un experto en tiros al arco.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+<!-- REVIEWS Section  -->
+<div id="testmonial" class="container-fluid wow fadeIn bg-dark text-light has-height-lg middle-items">
+    <h2 class="section-title my-5 text-center">Opiniones</h2>
+    <div class="row mt-3 mb-5 containerCenter">
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">Ing. Yuliana Pichardo</h3>
+                <h6 class="testmonial-subtitle">Web Designer</h6>
+                <div class="testmonial-body">
+                    <p>¡Bienvenidos a la página web diseñada por mí! Mi nombre es [Yuliana Pichardo] y he trabajado en
+                        el diseño y desarrollo de esta página para asegurarme de que la experiencia del usuario sea
+                        óptima.
+
+                        Mi enfoque en el diseño se centra en la estética y la usabilidad. Quiero que los usuarios
+                        disfruten de la navegación por esta página, y al mismo tiempo, que puedan encontrar fácilmente
+                        lo que buscan. Por eso, he creado una estructura clara y sencilla para que la navegación sea
+                        intuitiva.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card">
+                <h3 class="testmonial-title">Ing. Oliver del Jesus</h3>
+                <h6 class="testmonial-subtitle">UX/UI Designer</h6>
+                <div class="testmonial-body">
+                    <p>¡Bienvenidos a la página web diseñada por mí! Soy [Oliver Del Jesus], un UX/UI Designer con
+                        experiencia en la creación de experiencias digitales excepcionales.
+
+                        En mi enfoque del diseño, el usuario es el centro de todo. He trabajado arduamente para
+                        asegurarme de que cada elemento de esta página se adapte a las necesidades y expectativas del
+                        usuario, lo que incluye una navegación intuitiva y un diseño atractivo y funcional.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- CONTACT Section  -->
+<div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn">
+    <div class="row">
+        <!-- Mapa de la primera cancha -->
+        <div class="col-md-6 px-0 map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.7504264929744!2d-69.96908688854774!3d18.449637382557793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea561f205ee6ce1%3A0x4863ecc73de93fac!2sSoccer%20Town!5e0!3m2!1ses!2sdo!4v1690004397907!5m2!1ses!2sdo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-6 px-5 has-height-lg middle-items info-container">
+            <h3>FIND US</h3>
+            <div class="text-muted">
+                <p><span class="ti-location-pin pr-3"></span> Av 27 de Febrero 532, Santo Domingo</p>
+                <p><span class="ti-support pr-3"></span> (809)620-1169</p>
+                <p><span class="ti-email pr-3"></span> info@soccertown.com.do.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mapa y detalles para la segunda cancha -->
+<div class="container-fluid bg-dark text-light border-top wow fadeIn">
+    <div class="row">
+        <div class="col-md-6 px-0 map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.0053915066433!2d-69.95214758854709!3d18.483414982530416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf893a7239bfdf%3A0x728f1c5933245ffc!2sBar%C3%A7a%20Academy%20%E2%80%A2%20Sede%20UNPHU!5e0!3m2!1ses!2sdo!4v1690004760730!5m2!1ses!2sdo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-6 px-5 has-height-lg middle-items info-container">
+            <h3>FIND US</h3>
+            <div class="text-muted">
+                <p><span class="ti-location-pin pr-3"></span> Av. John F. Kennedy Km 7, Santo Domingo</p>
+                <p><span class="ti-support pr-3"></span> (809) 475-1111</p>
+                <p><span class="ti-email pr-3"></span> barcaacademy@barcaacademyrd.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Page footer -->
+<div class="container-fluid bg-dark text-light has-height-md middle-items border-top text-center wow fadeIn">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>EMAIL US</h3>
+            <p class="text-muted">Oliverato.2928@gmail.com</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>CALL US</h3>
+            <p class="text-muted">+1 829-864-3636</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>FIND US</h3>
+            <p class="text-muted">PUCMM Edificio A1, F37C+868, Santo Domingo</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- core  -->
+<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+<!-- bootstrap affix -->
+<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+<!-- wow.js -->
+<script src="assets/vendors/wow/wow.js"></script>
+
+<!-- google maps -->
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+
+<!-- FoodHut js -->
+<script src="assets/js/foodhut.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('1UZOt0ZzYfVC2R7Vw');
+        })();
+    </script>
+
+<script>
+    
+   function logout() {
+    // Clear the user data from localStorage.
+    localStorage.removeItem('usuarios');
+
+    // Update the page to reflect that no user is logged in.
+    document.getElementById('registro-button').style.display = 'block';
+    document.getElementById('login-button').style.display = 'block';
+    document.getElementById('isLogged').style.display = 'none';
+    document.getElementById('logout-button').style.display = 'none';
+}
+
+function checkIfLoggedIn() {
+    // Get the user data from localStorage.
+    var usuarios = localStorage.getItem('usuarios');
+
+    // Parse the data back into a JavaScript object.
+    if (usuarios) {
+        usuarios = JSON.parse(usuarios);
+    }
+
+    // Check if there are any users.
+    if (usuarios && usuarios.length > 0) {
+        // If there are users, hide the login and register buttons and display the user info and logout button.
+        document.getElementById('registro-button').style.display = 'none';
+        document.getElementById('login-button').style.display = 'none';
+        document.getElementById('userName').textContent = usuarios[0].nombre;  // assuming the user object has a 'nombre' property
+        document.getElementById('isLogged').style.display = 'block';
+        document.getElementById('logout-button').style.display = 'block';
+    } else {
+        // If there are no users, hide the user info and logout button and display the login and register buttons.
+        document.getElementById('registro-button').style.display = 'block';
+        document.getElementById('login-button').style.display = 'block';
+        document.getElementById('isLogged').style.display = 'none';
+        document.getElementById('logout-button').style.display = 'none';
+    }
+}
+
+// Run the function when the page loads.
+window.onload = checkIfLoggedIn;
+
+
+    function guardarReservacion() {
+
+       var email = document.getElementById('email').value;
+        var nombre = document.getElementById('name').value;
+        var hora = document.getElementById('time').value;
+        var fecha = document.getElementById('date').value;
+
+
+        var reservaciones = localStorage.getItem('reservaciones');
+
+        if (reservaciones) {
+            reservaciones = JSON.parse(reservaciones);
+        } else {
+            reservaciones = [];
+        }
+
+
+        var canchaDisponible = validarDisponibilidadCancha(hora, fecha, reservaciones);
+
+        if (!canchaDisponible) {
+            alert('Lo sentimos, la cancha no está disponible en ese día y horario. Por favor, elige otra fecha u hora.');
+            return;
+        }
+
+
+        var reservacion = {
+             email: email,
+            nombre: nombre,
+            hora: hora,
+            fecha: fecha
+        };
+
+
+        reservaciones.push(reservacion);
+
+
+        localStorage.setItem('reservaciones', JSON.stringify(reservaciones));
+        enviarCorreo(reservacion);
+
+        alert('La reservación se ha guardado correctamente.');
+    }
+
+    function enviarCorreo(reservacion) {
+      // Enviar el correo usando EmailJS
+      emailjs.send('service_skn6yj2', 'template_h4ne0o9', {
+        email: document.getElementById('email').value,
+        name: document.getElementById('name').value,
+        date: document.getElementById('time').value,
+        time: document.getElementById('date').value
+      })
+      .then(function(response) {
+        console.log('Correo enviado correctamente', response);
+      }, function(error) {
+        console.log('Error al enviar el correo', error);
+      });
+    }
+
+    function validarDisponibilidadCancha(hora, fecha, reservaciones) {
+
+        for (var i = 0; i < reservaciones.length; i++) {
+            var reservacion = reservaciones[i];
+
+            if (reservacion.fecha === fecha && reservacion.hora === hora) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    const jsonData = localStorage.getItem('reservaciones');
+
+    if (jsonData && jsonData.trim() !== '') {
+
+        try {
+            const data = JSON.parse(jsonData);
+
+            const tableBody = document.getElementById('table-body');
+
+            data.forEach((item) => {
+                const row = document.createElement('tr');
+
+                const nombreCell = document.createElement('td');
+                nombreCell.textContent = item.nombre;
+                row.appendChild(nombreCell);
+
+                const nameCell = document.createElement('td');
+                nameCell.textContent = item.fecha;
+                row.appendChild(nameCell);
+
+                const ageCell = document.createElement('td');
+                ageCell.textContent = item.hora;
+                row.appendChild(ageCell);
+
+
+
+                tableBody.appendChild(row);
+            });
+        } catch (error) {
+            console.error('Error al analizar el JSON:', error);
+        }
+    } else {
+        console.log('No hay datos en el Local Storage o están vacíos.');
+    }
+
+</script>
+
+</body>
+
+</html>

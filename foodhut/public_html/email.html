@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu página de reservas</title>
+    <!-- Agrega el script de EmailJS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Tu contenido HTML -->
+    <!-- ... -->
+
+    <!-- Botón de reserva -->
+    <button id="reservarBtn" onclick="guardarReservacion()">Reservar</button>
+
+    <!-- Tu contenido HTML -->
+    <!-- ... -->
+
+    <script>
+        // Inicializa EmailJS con tu User ID
+        emailjs.init("1UZOt0ZzYfVC2R7Vw");
+
+        // Función para enviar el correo de confirmación
+        function enviarCorreoConfirmacion(nombre, fecha, hora) {
+            console.log("teste");
+            // Reemplaza con tu Service ID y Template ID
+            var serviceID = "service_skn6yj2";
+            var templateID = "__ejs-test-mail-service__";
+
+            // Parámetros de la plantilla de correo electrónico
+            var templateParams = {
+                to_name: nombre,
+                fecha_reserva: fecha,
+                hora_reserva: hora
+            };
+
+            // Envía el correo utilizando EmailJS
+            emailjs.send(serviceID, templateID, templateParams)
+                .then(function(response) {
+                    console.log("Correo de confirmación enviado con éxito:", response);
+                }, function(error) {
+                    console.log("Error al enviar el correo de confirmación:", error);
+                });
+        }
+
+        // Función para guardar la reserva y enviar la confirmación
+        function guardarReservacion() {
+            console.log("teste2");
+            // Aquí va tu código para guardar la reserva en el Local Storage
+            // ...
+
+            // Luego de guardar la reserva, obtén los datos necesarios (nombre, fecha, hora)
+            var nombre = "Nombre del cliente"; // Reemplaza con el nombre obtenido del formulario
+            var fecha = "Fecha de la reserva"; // Reemplaza con la fecha obtenida del formulario
+            var hora = "Hora de la reserva";   // Reemplaza con la hora obtenida del formulario
+
+            // Envía la confirmación por correo electrónico
+            enviarCorreoConfirmacion(nombre, fecha, hora);
+        }
+    </script>
+</body>
+</html>

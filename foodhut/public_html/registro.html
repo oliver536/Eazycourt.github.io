@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <style>
+    /* Estilos básicos */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .message {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Clientes</h1>
+    <form id="register-form" >
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" name="contrasena" required>
+
+      <button type="button" onclick="guardarUsuario()" >Registrarse</button>
+      <p class="message">¿Ya tienes una cuenta? <a href="login.html" id="login-link">Iniciar sesión</a></p>
+    </form>
+
+  </div>
+
+  <script>
+    // Mostrar formulario de registro y ocultar formulario de inicio de sesión
+    // document.getElementById("login-form").style.display = "none";
+
+    // document.getElementById("register-link").addEventListener("click", function(e) {
+    //   e.preventDefault();
+    //   document.getElementById("register-form").style.display = "block";
+    //   document.getElementById("login-form").style.display = "none";
+    // });
+
+    // document.getElementById("login-link").addEventListener("click", function(e) {
+    //   e.preventDefault();
+    //   document.getElementById("register-form").style.display = "none";
+    //   document.getElementById("login-form").style.display = "block";
+    // });
+
+    function guardarUsuario() {
+
+      var usuarios = localStorage.getItem('usuarios');
+      var usuario = {
+        nombre: document.getElementById('nombre').value,
+        apellido: document.getElementById('apellido').value,
+        email: document.getElementById('correo').value,
+        contraseña: document.getElementById('contrasena').value
+      };
+
+      if (usuarios) {
+        usuarios = JSON.parse(usuarios);
+      } else {
+        usuarios = [];
+      }
+
+      usuarios.push(usuario);
+      localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+      alert('El usuario se ha registrado correctamente.');
+      window.location.href = "login.html";
+    }
+
+  </script>
+</body>
+</html>
