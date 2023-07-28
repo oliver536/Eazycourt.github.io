@@ -73,11 +73,25 @@
       <label for="contrasena">Contraseña:</label>
       <input type="password" id="contrasena" name="contrasena" required>
 
+      <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+      <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+      <label for="telefono">Número de Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
       <button type="button" onclick="guardarUsuario()" >Registrarse</button>
       <p class="message">¿Ya tienes una cuenta? <a href="login.html" id="login-link">Iniciar sesión</a></p>
     </form>
 
   </div>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('1UZOt0ZzYfVC2R7Vw');
+        })();
+    </script>
 
   <script>
     // Mostrar formulario de registro y ocultar formulario de inicio de sesión
@@ -102,8 +116,27 @@
         nombre: document.getElementById('nombre').value,
         apellido: document.getElementById('apellido').value,
         email: document.getElementById('correo').value,
-        contraseña: document.getElementById('contrasena').value
+        contraseña: document.getElementById('contrasena').value,
+        fechaNacimiento: document.getElementById('fechaNacimiento').value,
+        telefono: document.getElementById('telefono').value
       };
+
+      var hoy = new Date(); // Current date
+      var fechaNacimiento = new Date(usuario.fechaNacimiento);
+      var edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+
+      if (
+        hoy.getMonth() < fechaNacimiento.getMonth() ||
+        (hoy.getMonth() === fechaNacimiento.getMonth() &&
+          hoy.getDate() < fechaNacimiento.getDate())
+      ) {
+        edad--; // Reduce the age if the birthday hasn't occurred yet this year
+      }
+
+      if (edad < 18) {
+        alert('Lo sentimos, debes tener al menos 18 años para registrarte.');
+        return;
+      }
 
       if (usuarios) {
         usuarios = JSON.parse(usuarios);
@@ -113,11 +146,51 @@
 
       usuarios.push(usuario);
       localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
+      enviarCorreo();
       alert('El usuario se ha registrado correctamente.');
+      
       window.location.href = "login.html";
     }
 
+    function enviarCorreo() {
+      // Enviar el correo usando EmailJS
+      emailjs.send('service_skn6yj2', 'template_f9f3s1t', {
+        nombre: document.getElementById('nombre').value,
+        apellido: document.getElementById('apellido').value,
+        email: document.getElementById('correo').value,
+      })
+      .then(function(response) {
+        console.log('Correo enviado correctamente', response);
+      }, function(error) {
+        console.log('Error al enviar el correo', error);
+      });
+    }
   </script>
+  <style>
+    /* ... Existing styles ... */
+  
+    /* Style for the date of birth input */
+    #fechaNacimiento {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      /* Add any additional styles you want for the date of birth input */
+    }
+  
+    /* Style for the phone number input */
+    #telefono {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      /* Add any additional styles you want for the phone number input */
+    }
+  
+    /* ... Remaining styles ... */
+  </style>
+  
 </body>
 </html>

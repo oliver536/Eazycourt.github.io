@@ -63,6 +63,28 @@
     .dataTables_paginate .paginate_button.current {
       background-color: #0056b3;
     }
+
+    /* Estilos para el botón de logout */
+    .btn-logout {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #ff4f4f; /* Color de fondo del botón */
+      color: #fff; /* Color del texto del botón */
+      text-decoration: none; /* Quita el subrayado del texto */
+      border-radius: 5px; /* Bordes redondeados */
+      transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el mouse */
+    }
+
+    /* Estilos para cambiar el color del botón al pasar el mouse por encima */
+    .btn-logout:hover {
+      background-color: #ff7373; /* Nuevo color de fondo al pasar el mouse */
+    }
+
+    /* Estilos para cambiar el color del botón al hacer clic */
+    .btn-logout:active {
+      background-color: #ff3333; /* Nuevo color de fondo al hacer clic */
+    }
   </style>
 </head>
 <body>
@@ -76,9 +98,12 @@
       </tr>
     </thead>
     <tbody>
-      <!-- Aquí se llenará la tabla con la información almacenada en el LocalStorage -->
+      <!-- Aquí se llenará la tabla con la información almacenada en xel LocalStorage -->
     </tbody>
   </table>
+
+  <!-- Botón de Logout -->
+  <a class="btn-logout" href="index.html">Logout</a>
 
   <!-- Incluye la biblioteca de jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -35,10 +35,10 @@
                     <a class="nav-link" href="#about">Acerca de nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#gallary">Galeria</a>
+                    <span class="nav-link" href="#gallary">Galeria</span>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="reservas.html">Reservas</a>
+                    <a class="nav-link" href="#gallary">Reservas</a>
                 </li>
             </ul>
             <a class="navbar-brand m-auto" href="#">
@@ -229,6 +229,7 @@
             <label for="time">Hora:</label>
             <input type="time" name="time" id="time" required>
             <button type="button" onclick="guardarReservacion()">Reservar</button>
+            
         </form>
     </div>
 </div>
@@ -265,11 +266,11 @@
             <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#foods" role="tab"
-                        aria-controls="pills-home" aria-selected="true">servicios online</a>
+                        aria-controls="pills-home" aria-selected="true">Servicios Eazycourt</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#juices" role="tab"
-                        aria-controls="pills-profile" aria-selected="false">Servicios</a>
+                        aria-controls="pills-profile" aria-selected="false">Servicios complementarios</a>
                 </li>
             </ul>
         </div>
@@ -282,8 +283,8 @@
                         <img src="assets/imgs/soccer town.jpg" alt="template by DevCRID http://www.devcrud.com/"
                             class="rounded-0 card-img-top mg-responsive">
                         <div class="card-body">
-                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">Reservaciones en
-                                    línea</a></h1>
+                            <h1 class="text-center mb-4"><span href="#" class="badge badge-primary">Reservaciones en
+                                    línea</span></h1>
                             <h4 class="pt20 pb20"> </h4>
                             <p class="text-white">Los usuarios pueden reservar una cancha de fútbol en línea, eligiendo
                                 el día y la hora que deseen, con un proceso de pago seguro. </p>
@@ -295,7 +296,7 @@
                         <img src="assets/imgs/select.jpg" alt="template by DevCRID http://www.devcrud.com/"
                             class="rounded-0 card-img-top mg-responsive">
                         <div class="card-body">
-                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">Selección de cancha</a>
+                            <h1 class="text-center mb-4"><span href="#" class="badge badge-primary">Selección de cancha</span>
                             </h1>
                             <h4 class="pt20 pb20"></h4>
                             <p class="text-white">Los usuarios pueden ver imágenes de las canchas disponibles y
@@ -309,8 +310,8 @@
                         <img src="assets/imgs/reservaciones.png" alt="template by DevCRID http://www.devcrud.com/"
                             class="rounded-0 card-img-top mg-responsive">
                         <div class="card-body">
-                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">Calendario de
-                                    reservaciones</a></h1>
+                            <h1 class="text-center mb-4"><span href="#" class="badge badge-primary">Calendario de
+                                reservaciones</span></h1>
                             <h4 class="pt20 pb20"></h4>
                             <p class="text-white">Los usuarios pueden ver en línea un calendario de disponibilidad para
                                 cada cancha, con la posibilidad de hacer reservas futuras.</p>
@@ -325,7 +326,7 @@
                     <div class="card bg-transparent border">
                         <img src="assets/imgs/comida.jpg" alt="Venta de comida en las canchas" class="rounded-0 card-img-top mg-responsive">
                         <div class="card-body">
-                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">Venta de Comida</a></h1>
+                            <h1 class="text-center mb-4"><span href="#" class="badge badge-primary">Venta de Comida</span></h1>
                             <h4 class="pt20 pb20">Saborea deliciosos platillos</h4>
                             <p class="text-white">Disfruta de nuestra variedad de comida y bebidas mientras juegas en nuestras canchas. ¡Satisfacemos todos los gustos!</p>
                         </div>
@@ -335,7 +336,7 @@
                     <div class="card bg-transparent border">
                         <img src="assets/imgs/medico.jpg" alt="Área Médica" class="rounded-0 card-img-top mg-responsive">
                         <div class="card-body">
-                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">Área Médica</a></h1>
+                            <h1 class="text-center mb-4"><span href="#" class="badge badge-primary">Área Médica</span></h1>
                             <h4 class="pt20 pb20">Cuidamos de tu bienestar</h4>
                             <p class="text-white">Contamos con un equipo médico profesional en caso de cualquier lesión o emergencia durante el juego.</p>
                         </div>
@@ -345,7 +346,7 @@
                     <div class="card bg-transparent border">
                         <img src="assets/imgs/tiro.jpg" alt="Área de Entrenamiento de Tiro" class="rounded-0 card-img-top mg-responsive">
                         <div class="card-body">
-                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">Entrenamiento de Tiro</a></h1>
+                            <h1 class="text-center mb-4"><span href="#" class="badge badge-primary">Entrenamiento de Tiro</span></h1>
                             <h4 class="pt20 pb20">Mejora tu precisión</h4>
                             <p class="text-white">Nuestro área de entrenamiento de tiro te ayudará a perfeccionar tus habilidades y a ser un experto en tiros al arco.</p>
                         </div>
@@ -528,6 +529,7 @@ window.onload = checkIfLoggedIn;
         var nombre = document.getElementById('name').value;
         var hora = document.getElementById('time').value;
         var fecha = document.getElementById('date').value;
+        var url ="https://buy.stripe.com/test_7sI5mg1eNeK2cxi4gg";
 
 
         var reservaciones = localStorage.getItem('reservaciones');
@@ -560,6 +562,8 @@ window.onload = checkIfLoggedIn;
 
         localStorage.setItem('reservaciones', JSON.stringify(reservaciones));
         enviarCorreo(reservacion);
+        
+        window.location.href=url;
 
         alert('La reservación se ha guardado correctamente.');
     }
@@ -569,8 +573,8 @@ window.onload = checkIfLoggedIn;
       emailjs.send('service_skn6yj2', 'template_h4ne0o9', {
         email: document.getElementById('email').value,
         name: document.getElementById('name').value,
-        date: document.getElementById('time').value,
-        time: document.getElementById('date').value
+        time: document.getElementById('time').value,
+        date: document.getElementById('date').value
       })
       .then(function(response) {
         console.log('Correo enviado correctamente', response);
@@ -626,8 +630,10 @@ window.onload = checkIfLoggedIn;
     } else {
         console.log('No hay datos en el Local Storage o están vacíos.');
     }
+    
 
 </script>
+
 
 </body>
 

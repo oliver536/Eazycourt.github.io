@@ -5445,7 +5445,7 @@ input[type="button"].btn-block {
 
 .badge {
   display: inline-block;
-  padding: 0.25em 0.4em;
+  padding: 0.25em 0.1em;
   font-size: 75%;
   font-weight: 700;
   line-height: 1;
@@ -11936,6 +11936,30 @@ animation-fill-mode: both;
 .text-muted p {
   margin-bottom: 10px;
 }
+
+
+
+/* Estilos generales para el botón de logout */
+.btn-logout {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff4f4f; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  text-decoration: none; /* Quita el subrayado del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el mouse */
+}
+
+/* Estilos para cambiar el color del botón al pasar el mouse por encima */
+.btn-logout:hover {
+  background-color: #ff7373; /* Nuevo color de fondo al pasar el mouse */
+}
+
+/* Estilos para cambiar el color del botón al hacer clic */
+.btn-logout:active {
+  background-color: #ff3333; /* Nuevo color de fondo al hacer clic */
+}
+
 
 
 
